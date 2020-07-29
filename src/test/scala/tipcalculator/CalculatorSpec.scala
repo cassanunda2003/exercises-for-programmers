@@ -27,5 +27,9 @@ class CalculatorSpec extends AnyFreeSpec with Matchers {
         "Return the total due for 200 pounds" in {
             sut.totalAmount(200.00) mustBe 230.00
         }
+
+        "Round up the ammount to 2 decimal places" in {
+            sut.totalAmount(11.25) mustBe 12.94
+        }
     }
 }
