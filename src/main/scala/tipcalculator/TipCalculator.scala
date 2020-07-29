@@ -7,6 +7,9 @@ trait TipCalculator {
   def calculateTip(amount: Double, percentageOfTip: Double = defaultTip): Double
 
   def totalAmount(amount: Double, percentageOfTip: Double = defaultTip): Double
+
+  def convertTipToPercentage(amount: Int): Double = amount/100.00
+  
 }
 
 class Calculator extends TipCalculator {
